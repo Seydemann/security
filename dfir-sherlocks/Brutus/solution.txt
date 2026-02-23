@@ -1,0 +1,12 @@
+head -1 auth.lg # We just want to see the layout/structure of the lines so that we can come up with the right awk command that lists off all the processes that got executed.
+awk '{print $5}' auth.log # Turns out we need to pipe this into sed to get rid of PIDs, or else we can't get rid of duplicates
+awk '{print $5}' auth.log | sed 's/[\[\:].*//g' | sort | uniq -c | sort -n # We probably we want to save this list into a separate text file, it's very handy
+grep sshd auth.log | grep -v pam_unix | grep -oP ' [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'| sort | uniq -c # It's easy to manually scan for IPs in neovim to get the brute force attacker, but we can do this to be doubly certain
+grep sshd auth.log | grep -v pam_unix | grep 'Accepted password' | grep 65.2.161.68
+OR
+grep sshd auth.log | grep -v pam_unix | grep 65.2.161.68 | grep -A3 'Accepted password'
+grep systemd-login auth.log
+grep useradd auth.log
+grep usermod auth.log
+TZ=UTC last -F -f auth.log
+grep sudo: auth.log # normally auth.log doesn't give you the commands, but if it's with a sudo, it does

@@ -1,0 +1,19 @@
+.*
+!.gitignore
+!.gitattributes
+
+# LaTeX compilation artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.pdf
+*.bcf
+*.blg
+*.bbl
+*.dvi
+*.run.xml
+output

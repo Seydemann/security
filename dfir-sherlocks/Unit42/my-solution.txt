@@ -1,0 +1,8 @@
+Task 1: Navigated to the column EventId, pressed Shift + F, and I immediately got the answer from the new sheet with the histogram view
+Task 2: I didn't have to quit the view from Task 1, I scrolled down to the EventId "1", pressed on it, and there were very few entries so I navigated all the way to the column "ExecutableInfo," and from there I could see (albeit truncated) the odd name "cyberjunkie," and that was the User's folder, part of the path.
+Task 3: Navigated to the TimeCreated column, pressed [ to ensure oldest->newest order, pressed on the first entry, and from there I could see the name down in PayloadData6
+Task 4: navigated to the EventId column, pressed Shift + F, pressed on EventId 2, navigated to the column PayloadData4 in the new sheet, pressed | then wrote pdf, pressed " to isolate the result, pressed on the entry, and from there I could scroll down to PayloadData5 and see the answer
+Task 5: navigated to the PayloadData4 column, pressed | to search for once.cmd, pressed " to isolate, then navigated to the entry with eventId 11, from there I could navigate back to PayloadData4 to copy the full path after clicking e, then Ctrl + O to open up neovim and paste directly from there.
+Task 6: I had to get back to the view from Task 1, then click on EventId 22, navigate to the column "Payload Data 3" as it contains the "Image," from there clicked | and wrote "Prevent", then " to isolate the selection, clicked on the entry and from that view I could from Payload data the domain name
+Task 7: Navigated to the EventId column to press Shift + F, pressed on 3, there was only one event so you can guess the rest
+Task 8: Navigated to the EventId column to press Shift + F, pressed on 5, there was only one event here as well :)

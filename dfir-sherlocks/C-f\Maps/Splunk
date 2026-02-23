@@ -1,0 +1,35 @@
+C-f
+
+The architecture can be divided into the following main components
+Forwarders - HTTP Event Collectors
+Indexers
+Search Heads - Knowledge Objects
+Deployment Server
+
+Splunk's key components include: A Splunk App, on the other hand, can be seen as a comprehensive solution that typically utilizes one or more Technology Add-ons to enhance its capabilities.
+
+
+Basic Commands:
+search index="main" "UNKNOWN"
+
+Splunk automatically identifies certain data as fields (like source, sourcetype, host, EventCode, etc.)
+
+The fields command specifies which fields should be included or excluded in the search results.
+
+The table command presents search results in a tabular format.
+
+The rename command renames a field in the search results
+
+The 'dedup' command removes duplicate events
+
+The sort command sorts the search results
+
+The stats command performs statistical operations
+
+The chart command creates a data visualization based on statistical operations
+
+The eval command creates or redefines fields
+
+index="main" EventCode=4662 | rex max_match=0 "[^%](?<guid>{.*})" | table guid
+
+The lookup command enriches the data with external sources
