@@ -75,3 +75,10 @@ Others have no permissions at all.
 Task 2: Identify SUID Files
 
 Use the appropriate command to print a list of files that have the SUID (Set User ID) permission set.
+
+## **Lesson 11 Lab: Managing Network Configuration**
+- Set the hostname for your server to rhcsaserver.example.com
+- Set your server to a fixed IP address that matches your current network configuration
+- Also set a second IP address 10.0.0.10/24 on the same network interface
+- Enable host name resolution for your local server hostname
+- Reboot and verify your network is still working with the new settings
